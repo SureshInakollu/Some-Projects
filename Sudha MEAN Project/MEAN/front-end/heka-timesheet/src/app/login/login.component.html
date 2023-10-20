@@ -1,0 +1,20 @@
+<div style="text-align:center;margin:auto">
+    <h2 *ngIf="!loginForm.valid" class="text-danger">{{error}}</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Email" formControlName="email">
+                  </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Password" formControlName="password">
+                </mat-form-field>
+            </div>
+            <button mat-raised-button type="submit" color="primary">Login</button>
+        </div>
+    </form>    
+</div>>
